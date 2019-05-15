@@ -1,0 +1,81 @@
+/*!
+Theme Name: CodeCamp
+Theme URI: http://theredsunflower.com/code-camp
+Author: Jessica Patterson
+Author URI: http://theredsunflower.com
+Description: Code Camp Starter Theme
+Version: 3.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: CodeCamp
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+CodeCamp is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+This theme was developed for Code Camp by Red Sunflower programs;
+*/
+
+/*eliminates margin around entire webpage*/
+body {
+	margin: 0;
+}
+
+/*images should not exceed parent container*/
+img {
+	max-width: 100%;
+}
+
+/*Default Styles*/
+
+#header {
+	background-color: lightpink;
+	padding: 2.5%;
+	margin: 0;
+	height: 100px;
+	text-align: center;
+}
+#content {
+	background-color: lightblue;
+	overflow: auto;
+}
+#section-one {
+	background-color: gray;
+	width: 45%;
+	float: left;
+	margin: 2.5%;
+}
+#section-two {
+	background-color:green;
+	width: 45%;
+	float: left;
+	margin: 2.5%;
+}
+#section-three {
+	background-color: darkblue;
+	float: left;
+	width: 95%;
+	margin: 2.5%;
+}
+#section-four {
+	background-color: darkred;
+	float: left;
+	width: 95%;
+	margin: 2.5%;
+}
+#footer {
+	background-color: purple;
+	text-align: center;
+	color: white;
+	padding: 2.5%;
+}
+#footer a {
+	color: white;
+}
+#footer a:hover {
+	color: yellow;
+}
+
+/*Custom Styles*/
