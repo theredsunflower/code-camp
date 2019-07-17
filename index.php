@@ -11,30 +11,35 @@ get_header(); ?>
 
 <div id="page">
 	<div id="content">
-		<div id="section-one">
-	    	<h1>Section One</h1>
-	    	<img id="" src="http://codecamp.theredsunflower.com/wp-content/uploads/2018/07/dank-memes-face.png">
-	    	<a id="" href="">Learn More</a>
-	    	<p id="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue mauris libero, mattis dapibus tortor commodo quis. Nam libero urna, fringilla id dictum in, sagittis sit amet justo. Duis iaculis elit ac metus volutpat, sed consequat eros volutpat. Ut ac metus lobortis, cursus diam nec, dignissim erat. Pellentesque vitae tincidunt eros. Vestibulum et luctus est, et pharetra neque. Vivamus viverra tristique velit a imperdiet. Curabitur vitae odio vitae lectus faucibus aliquet ut vitae odio. Nam egestas porttitor neque, posuere gravida nisl ultricies et. Phasellus lobortis tellus sed tortor fermentum, finibus efficitur lacus pharetra. Suspendisse volutpat pharetra lorem eu pulvinar. Vestibulum auctor nulla est, quis accumsan odio iaculis ut. Phasellus sagittis mauris sit amet fermentum suscipit. Nullam vehicula nulla orci, sed mattis tellus ornare ac.</p>
-		</div>
-		<div id="section-two">
-	    	<h1>Section Two</h1>
-	    	<img id="image-two" src="http://codecamp.theredsunflower.com/wp-content/uploads/2018/07/giphyy.gif">
-	    	<a id="" href="">Learn More</a>
-	    	<p id="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue mauris libero, mattis dapibus tortor commodo quis. Nam libero urna, fringilla id dictum in, sagittis sit amet justo. Duis iaculis elit ac metus volutpat, sed consequat eros volutpat. Ut ac metus lobortis, cursus diam nec, dignissim erat. Pellentesque vitae tincidunt eros. Vestibulum et luctus est, et pharetra neque. Vivamus viverra tristique velit a imperdiet. Curabitur vitae odio vitae lectus faucibus aliquet ut vitae odio. Nam egestas porttitor neque, posuere gravida nisl ultricies et. Phasellus lobortis tellus sed tortor fermentum, finibus efficitur lacus pharetra. Suspendisse volutpat pharetra lorem eu pulvinar. Vestibulum auctor nulla est, quis accumsan odio iaculis ut. Phasellus sagittis mauris sit amet fermentum suscipit. Nullam vehicula nulla orci, sed mattis tellus ornare ac.</p>
-		</div>
-		<div id="section-three">
-	    	<h1>Section Three</h1>
-	    	<img id="" src="http://codecamp.theredsunflower.com/wp-content/uploads/2018/07/giphy-2.gif">
-	    	<a id="" href="">Learn More</a>
-	    	<p id="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue mauris libero, mattis dapibus tortor commodo quis. Nam libero urna, fringilla id dictum in, sagittis sit amet justo. Duis iaculis elit ac metus volutpat, sed consequat eros volutpat. Ut ac metus lobortis, cursus diam nec, dignissim erat. Pellentesque vitae tincidunt eros. Vestibulum et luctus est, et pharetra neque. Vivamus viverra tristique velit a imperdiet. Curabitur vitae odio vitae lectus faucibus aliquet ut vitae odio. Nam egestas porttitor neque, posuere gravida nisl ultricies et. Phasellus lobortis tellus sed tortor fermentum, finibus efficitur lacus pharetra. Suspendisse volutpat pharetra lorem eu pulvinar. Vestibulum auctor nulla est, quis accumsan odio iaculis ut. Phasellus sagittis mauris sit amet fermentum suscipit. Nullam vehicula nulla orci, sed mattis tellus ornare ac.</p>
-		</div>
-		<div id="section-four">
-	    	<h1>Section Four</h1>
-	    	<img id="" src="http://codecamp.theredsunflower.com/wp-content/uploads/2018/07/stub-toe.png">
-	    	<a id="" href="">Learn More</a>
-	    	<p id="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus congue mauris libero, mattis dapibus tortor commodo quis. Nam libero urna, fringilla id dictum in, sagittis sit amet justo. Duis iaculis elit ac metus volutpat, sed consequat eros volutpat. Ut ac metus lobortis, cursus diam nec, dignissim erat. Pellentesque vitae tincidunt eros. Vestibulum et luctus est, et pharetra neque. Vivamus viverra tristique velit a imperdiet. Curabitur vitae odio vitae lectus faucibus aliquet ut vitae odio. Nam egestas porttitor neque, posuere gravida nisl ultricies et. Phasellus lobortis tellus sed tortor fermentum, finibus efficitur lacus pharetra. Suspendisse volutpat pharetra lorem eu pulvinar. Vestibulum auctor nulla est, quis accumsan odio iaculis ut. Phasellus sagittis mauris sit amet fermentum suscipit. Nullam vehicula nulla orci, sed mattis tellus ornare ac.</p>
-		</div>
+		<?php
+
+		// checks if there are any posts that match the query
+		if (have_posts()) :
+
+		  // If there are posts matching the query then start the loop
+		  while ( have_posts() ) : the_post();
+
+		    // the code between the while loop will be repeated for each post
+		    ?>
+
+		    <h2 id="post-<?php the_ID(); ?>"><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a></h2>
+
+		    <p class="date-author">Posted: <?php the_date(); ?> by <?php the_author(); ?></p>
+
+		    <?php the_content(); ?>
+
+		    <?php
+
+		    // Stop the loop when all posts are displayed
+		 endwhile;
+
+		// If no posts were found
+		else :
+		?>
+		<p>Sorry no posts matched your criteria.</p>
+		<?php
+		endif;
+		?>
 	</div><!--content-->
 </div><!--page-->
 
