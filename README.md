@@ -2,7 +2,7 @@
 Starter theme for Code Camp by Red Sunflower programs. 
 
 # To use:
-Download Zip from Github
+- Download Zip file from Github
 - Log into WordPress dashboard
 - From WordPress dashboard select Appearance > Themes > Add New > Upload Theme
 - Once the theme has installed successfully, select "Activate Theme"
