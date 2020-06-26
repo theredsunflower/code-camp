@@ -4,7 +4,7 @@ Theme URI: http://theredsunflower.com/code-camp
 Author: Jessica Patterson
 Author URI: http://theredsunflower.com
 Description: Code Camp Starter Theme
-Version: 3.0
+Version: 4.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: CodeCamp
@@ -34,42 +34,48 @@ img {
 	background-color: lightpink;
 	padding: 2.5%;
 	margin: 0;
-	height: 100px;
 	text-align: center;
+  	box-sizing: border-box;
 }
 #content {
 	background-color: lightblue;
 	overflow: auto;
+  	box-sizing: border-box;
 }
 #section-one {
 	background-color: gray;
 	width: 45%;
 	float: left;
 	margin: 2.5%;
+  	box-sizing: border-box;
 }
 #section-two {
 	background-color:green;
 	width: 45%;
 	float: left;
 	margin: 2.5%;
+  	box-sizing: border-box;
 }
 #section-three {
 	background-color: darkblue;
 	float: left;
 	width: 95%;
 	margin: 2.5%;
+  	box-sizing: border-box;
 }
 #section-four {
 	background-color: darkred;
 	float: left;
 	width: 95%;
 	margin: 2.5%;
+  	box-sizing: border-box;
 }
 #footer {
 	background-color: purple;
 	text-align: center;
 	color: white;
 	padding: 2.5%;
+  	box-sizing: border-box;
 }
 #footer a {
 	color: white;
