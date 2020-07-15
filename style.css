@@ -77,5 +77,10 @@ img {
 #footer a:hover {
 	color: yellow;
 }
-
+#other-content {
+	width: 80%;
+  	margin: 2.5% 10% 2.5% 10%;
+  	padding: 2.5%;
+  	box-sizing: border-box;
+}
 /*Custom Styles*/
