@@ -28,12 +28,12 @@
 			<h1>Code Camp</h1>
 		</div>
 
-	<!--<nav>
+	<nav>
 		<div id="menu">
-			<h2>Menu</h2>-->
-            <?php /*wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); */?>
-        <!--</div>
-	</nav>--><!-- #site-navigation -->
+			<h2>Menu</h2>
+            		<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+        	</div>
+	</nav><!-- #site-navigation -->
 	
 	</header><!-- #masthead -->
 	
