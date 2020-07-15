@@ -10,7 +10,7 @@
 get_header(); ?>
 
 <div id="page">
-	<div id="content">
+	<div id="other-content">
 		<?php
 
 		// checks if there are any posts that match the query
