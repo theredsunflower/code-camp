@@ -1,25 +1,29 @@
 /*!
-Theme Name: CodeCamp
+Theme Name: Code Camp
 Theme URI: http://theredsunflower.com/code-camp
-Author: Jessica Patterson
-Author URI: http://theredsunflower.com
-Description: Code Camp Starter Theme
-Version: 4.0
+Author: Red Sunflower, Inc.
+Author URI: https://theredsunflower.com
+Description: A clean and simple starter theme that takes advantage of the WP Block Editor and Customizer.
+Version: 5.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: CodeCamp
-Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+Tags: custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, mobile friendly
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-CodeCamp is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+The Code Camp Starter Theme is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
 
-This theme was developed for Code Camp by Red Sunflower programs;
+This theme was developed for Code Camp by The Red Sunflower;
 */
 
-/*eliminates margin around entire webpage*/
+
+html {
+	font-family: 'Nunito', sans-serif;;
+}
 body {
+	/*eliminates margin around entire webpage*/
 	margin: 0;
 }
 
@@ -31,62 +35,71 @@ img {
 /*Default Styles*/
 
 #header {
-	background-color: lightpink;
-	padding: 2.5%;
+	background-color: white;
+	padding: 20px;
 	margin: 0;
 	text-align: center;
   	box-sizing: border-box;
+  	border-bottom: 1px solid lightgray;
+}
+#header h1 {
+	margin: 5px 0;
+}
+#header p {
+	margin: 5px 0;
+}
+#logo {
+	width: 100%;
+	text-align: center;
+}
+#logo img {
+	max-width: 80px;
+}
+#menu {
+	width: 100%;
+	text-align: center;
+}
+#menu ul {
+	list-style: none;
+	padding: 0;
+	margin: 5px 0;
+}
+#menu li {
+	text-decoration: none;
+	display: inline-block;
+	padding: 10px;
+	font-size: 16px;
+}
+#menu a {
+	color: black;
+	text-decoration: none;
+}
+#menu a:hover {
+	border-bottom: 2px solid black;
 }
 #content {
-	background-color: lightblue;
+	max-width: 1200px;
+	margin: 0 auto;
+	background-color: white;
 	overflow: auto;
   	box-sizing: border-box;
+  	padding: 2.5% 10%;
 }
-#section-one {
-	background-color: gray;
-	width: 45%;
-	float: left;
-	margin: 2.5%;
-  	box-sizing: border-box;
-}
-#section-two {
-	background-color:green;
-	width: 45%;
-	float: left;
-	margin: 2.5%;
-  	box-sizing: border-box;
-}
-#section-three {
-	background-color: darkblue;
-	float: left;
-	width: 95%;
-	margin: 2.5%;
-  	box-sizing: border-box;
-}
-#section-four {
-	background-color: darkred;
-	float: left;
-	width: 95%;
-	margin: 2.5%;
-  	box-sizing: border-box;
+.page-title {
+	text-align: center;
 }
 #footer {
-	background-color: purple;
+	background-color: white;
 	text-align: center;
-	color: white;
-	padding: 2.5%;
+	color: black;
+	padding: 20px;
   	box-sizing: border-box;
+  	border-top: 1px solid lightgray;
 }
 #footer a {
-	color: white;
+	color: black;
 }
-#footer a:hover {
-	color: yellow;
+#sidebar {
+	/*improves compatibility with woocommerce*/
+	display: none;
 }
-#other-content {
-	width: 80%;
-  	margin: 2.5% 10% 2.5% 10%;
-  	padding: 2.5%;
-  	box-sizing: border-box;
-}
-/*Custom Styles*/
