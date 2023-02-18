@@ -11,7 +11,10 @@
 
 ?>
 <div id="footer">
-		<p>A <a href="https://theredsunflower.com">Red Sunflower</a> Site</p>
+    <?php 
+        $blogname = get_bloginfo('name');
+        echo '<p><b>'.$blogname.' &copy;</b></p>';
+    ?>
 </div>
 </div> <!--closing site from index-->
 <?php wp_footer(); ?>
